@@ -37,12 +37,12 @@ class TownsService
             $this->error = $exception->getMessage();
             $this->bool = False;
         }
-        return collect(['success' => $this->bool, 'error' => $this->error]);
+        return collect(['success' => $this->bool, 'errors' => $this->error]);
     }
 
     public function get_towns()
     {
         $towns = Towns::all();
-        return collect(['success' => $this->bool, 'error' => $this->error, 'data' => $towns]);
+        return collect(['success' => $this->bool, 'errors' => $this->error, 'data' => $towns]);
     }
 }

@@ -17,7 +17,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::group(['middleware' => ['api']], function () {
+    /*
+     *towns routes
+     */
     Route::post('towns', 'TownsController@create_town');
     Route::get('towns', 'TownsController@fetch_towns');
+    /*
+     *companies routes
+     */
+    Route::post('companies', 'BusCompanyController@create_bus_company');
+    Route::get('companies', 'BusCompanyController@fetch_companies');
 
 });
