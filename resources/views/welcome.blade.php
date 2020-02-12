@@ -35,7 +35,6 @@
 
                     <li>
                         <router-link to="/bus-company">Bus Companies</router-link>
-
                     </li>
 
                 </ul>

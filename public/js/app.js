@@ -1955,6 +1955,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2608,10 +2615,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])({
+    towns: function towns(state) {
+      return state.towns.all;
+    }
+  })),
+  created: function created() {
+    this.getAllTowns();
+  },
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('towns', {
+    getAllTowns: 'getAll'
+  }))
 });
 
 /***/ }),
@@ -20311,2490 +20328,8 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "theme-hero-area theme-hero-area-primary" }, [
-        _c("div", { staticClass: "theme-hero-area-bg-wrap" }, [
-          _c("div", {
-            staticClass: "theme-hero-area-bg ws-action",
-            staticStyle: {
-              "background-image": 'url("./img/1500x800.png")',
-              transform: "translate3d(0px, 73.25px, 0px)",
-              height: "1150.5px"
-            },
-            attrs: { "data-parallax": "true" }
-          }),
-          _vm._v(" "),
-          _c("div", {
-            staticClass: "theme-hero-area-mask theme-hero-area-mask-half"
-          }),
-          _vm._v(" "),
-          _c("div", {
-            staticClass:
-              "theme-hero-area-inner-shadow theme-hero-area-inner-shadow-light"
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "theme-hero-area-body" }, [
-          _c("div", { staticClass: "_pt-250 _pb-200 _pv-mob-50" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "theme-search-area-tabs" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "theme-search-area-tabs-header _c-w _ta-mob-c"
-                  },
-                  [
-                    _c("h1", { staticClass: "theme-search-area-tabs-title" }, [
-                      _vm._v("Start Your Jorney")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "theme-search-area-tabs-subtitle" },
-                      [_vm._v("Compare hundreds travel websites at once")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "tabbable" }, [
-                  _c(
-                    "ul",
-                    {
-                      staticClass:
-                        "nav nav-tabs nav-line nav-white nav-lg nav-mob-inline",
-                      attrs: { role: "tablist" }
-                    },
-                    [
-                      _c(
-                        "li",
-                        {
-                          staticClass: "active",
-                          attrs: { role: "presentation" }
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "aria-controls": "SearchAreaTabs-1",
-                                role: "tab",
-                                "data-toggle": "tab",
-                                href: "#SearchAreaTabs-1"
-                              }
-                            },
-                            [_vm._v("Hotels")]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("li", { attrs: { role: "presentation" } }, [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "aria-controls": "SearchAreaTabs-2",
-                              role: "tab",
-                              "data-toggle": "tab",
-                              href: "#SearchAreaTabs-2"
-                            }
-                          },
-                          [_vm._v("Homes")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { attrs: { role: "presentation" } }, [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "aria-controls": "SearchAreaTabs-3",
-                              role: "tab",
-                              "data-toggle": "tab",
-                              href: "#SearchAreaTabs-3"
-                            }
-                          },
-                          [_vm._v("Flights")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { attrs: { role: "presentation" } }, [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "aria-controls": "SearchAreaTabs-4",
-                              role: "tab",
-                              "data-toggle": "tab",
-                              href: "#SearchAreaTabs-4"
-                            }
-                          },
-                          [_vm._v("Cars")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { attrs: { role: "presentation" } }, [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "aria-controls": "SearchAreaTabs-5",
-                              role: "tab",
-                              "data-toggle": "tab",
-                              href: "#SearchAreaTabs-5"
-                            }
-                          },
-                          [_vm._v("Experiences")]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "tab-content _pt-20" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane active",
-                        attrs: { id: "SearchAreaTabs-1", role: "tab-panel" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "theme-search-area theme-search-area-stacked"
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "theme-search-area-form" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "row",
-                                    attrs: { "data-gutter": "none" }
-                                  },
-                                  [
-                                    _c("div", { staticClass: "col-md-3 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "theme-search-area-section-inner"
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass:
-                                                  "theme-search-area-section-icon lin lin-location-pin"
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input typeahead",
-                                                attrs: {
-                                                  type: "text",
-                                                  placeholder: "Hotel Location",
-                                                  "data-provide": "typeahead"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-4 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerStart _mob-h",
-                                                        attrs: {
-                                                          value: "Wed 06/27",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-in"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-06-27",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerEnd _mob-h",
-                                                        attrs: {
-                                                          value: "Mon 07/02",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-out"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-07-02",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-4 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr quantity-selector",
-                                                  attrs: {
-                                                    "data-increment": "Rooms"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-tag"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input",
-                                                        attrs: {
-                                                          value: "1 Room",
-                                                          type: "text"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "quantity-selector-box",
-                                                          attrs: {
-                                                            id:
-                                                              "HotelSearchRooms"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "quantity-selector-inner"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "p",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-title"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                                                                Rooms"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "ul",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-controls"
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-decrement"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "-"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-current"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "\n                                                                                    1\n                                                                                "
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-increment"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "+"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr quantity-selector",
-                                                  attrs: {
-                                                    "data-increment": "Guests"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-people"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input",
-                                                        attrs: {
-                                                          value: "2 Guests",
-                                                          type: "text"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "quantity-selector-box",
-                                                          attrs: {
-                                                            id:
-                                                              "HotelSearchGuests"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "quantity-selector-inner"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "p",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-title"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                                                                Guests"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "ul",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-controls"
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-decrement"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "-"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-current"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "\n                                                                                    1\n                                                                                "
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-increment"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "+"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-1 " }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-submit _mt-0 theme-search-area-submit-no-border theme-search-area-submit-curved"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                                        Search\n                                                    "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "theme-search-area-options _mob-h theme-search-area-options-white theme-search-area-options-dot-primary-inverse clearfix"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "btn-group theme-search-area-options-list",
-                                    attrs: { "data-toggle": "buttons" }
-                                  },
-                                  [
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary active" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "hotel-options",
-                                            id: "hotel-option-1",
-                                            checked: ""
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Any\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "hotel-options",
-                                            id: "hotel-option-2"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Business\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "hotel-options",
-                                            id: "hotel-option-3"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Family\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "hotel-options",
-                                            id: "hotel-option-4"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Luxury\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "hotel-options",
-                                            id: "hotel-option-5"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Budget\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "hotel-options",
-                                            id: "hotel-option-6"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Romantic\n                                                "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane",
-                        attrs: { id: "SearchAreaTabs-2", role: "tab-panel" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "theme-search-area theme-search-area-stacked"
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "theme-search-area-form" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "row",
-                                    attrs: { "data-gutter": "none" }
-                                  },
-                                  [
-                                    _c("div", { staticClass: "col-md-4 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "theme-search-area-section-inner"
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass:
-                                                  "theme-search-area-section-icon lin lin-location-pin"
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input typeahead",
-                                                attrs: {
-                                                  type: "text",
-                                                  placeholder:
-                                                    "Apartment Location",
-                                                  "data-provide": "typeahead"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-7 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerStart _mob-h",
-                                                        attrs: {
-                                                          value: "Wed 06/27",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-in"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-06-27",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerEnd _mob-h",
-                                                        attrs: {
-                                                          value: "Mon 07/02",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-out"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-07-02",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr quantity-selector",
-                                                  attrs: {
-                                                    "data-increment": "Guests"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-people"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input",
-                                                        attrs: {
-                                                          value: "2 Guests",
-                                                          type: "text"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "quantity-selector-box",
-                                                          attrs: {
-                                                            id:
-                                                              "RoomSearchGuests"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "quantity-selector-inner"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "p",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-title"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                                                                Guests"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "ul",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-controls"
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-decrement"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "-"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-current"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "\n                                                                                    1\n                                                                                "
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-increment"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "+"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-1 " }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-submit _mt-0 theme-search-area-submit-no-border theme-search-area-submit-curved"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                                        Search\n                                                    "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "theme-search-area-options _mob-h theme-search-area-options-white theme-search-area-options-dot-primary-inverse clearfix"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "btn-group theme-search-area-options-list",
-                                    attrs: { "data-toggle": "buttons" }
-                                  },
-                                  [
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary active" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "room-options",
-                                            id: "room-option-1",
-                                            checked: ""
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Any\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "room-options",
-                                            id: "room-option-2"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Entire\n                                                    Home\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "room-options",
-                                            id: "room-option-3"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Private\n                                                    Room\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "room-options",
-                                            id: "room-option-4"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Shared\n                                                    Space\n                                                "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane",
-                        attrs: { id: "SearchAreaTabs-3", role: "tab-panel" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "theme-search-area theme-search-area-stacked"
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "theme-search-area-form" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "row",
-                                    attrs: { "data-gutter": "none" }
-                                  },
-                                  [
-                                    _c("div", { staticClass: "col-md-5 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-location-pin"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input typeahead",
-                                                        attrs: {
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Departure",
-                                                          "data-provide":
-                                                            "typeahead"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-location-pin"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input typeahead",
-                                                        attrs: {
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Arrival",
-                                                          "data-provide":
-                                                            "typeahead"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-6 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerStart _mob-h",
-                                                        attrs: {
-                                                          value: "Wed 06/27",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-in"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-06-27",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerEnd _mob-h",
-                                                        attrs: {
-                                                          value: "Mon 07/02",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-out"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-07-02",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr quantity-selector",
-                                                  attrs: {
-                                                    "data-increment":
-                                                      "Passengers"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-people"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input",
-                                                        attrs: {
-                                                          value: "1 Passenger",
-                                                          type: "text"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "quantity-selector-box",
-                                                          attrs: {
-                                                            id:
-                                                              "FlySearchPassengers"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "quantity-selector-inner"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "p",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-title"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                                                                Passengers"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "ul",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-controls"
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-decrement"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "-"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-current"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "\n                                                                                    1\n                                                                                "
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-increment"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "+"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-1 " }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-submit _mt-0 theme-search-area-submit-no-border theme-search-area-submit-curved"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                                        Search\n                                                    "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "theme-search-area-options theme-search-area-options-white theme-search-area-options-dot-primary-inverse clearfix"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "btn-group theme-search-area-options-list",
-                                    attrs: { "data-toggle": "buttons" }
-                                  },
-                                  [
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary active" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "flight-options",
-                                            id: "flight-option-1",
-                                            checked: ""
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Round Trip\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "flight-options",
-                                            id: "flight-option-2"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "One\n                                                    Way\n                                                "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane",
-                        attrs: { id: "SearchAreaTabs-4", role: "tab-panel" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "theme-search-area theme-search-area-stacked"
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "theme-search-area-form" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "row",
-                                    attrs: { "data-gutter": "none" }
-                                  },
-                                  [
-                                    _c("div", { staticClass: "col-md-7 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-location-pin"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input typeahead",
-                                                        attrs: {
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Pick up location",
-                                                          "data-provide":
-                                                            "typeahead"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-6 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-location-pin"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input typeahead",
-                                                        attrs: {
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Drop off location",
-                                                          "data-provide":
-                                                            "typeahead"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-2 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "theme-search-area-section-inner"
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass:
-                                                  "theme-search-area-section-icon lin lin-calendar"
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input datePickerStart _mob-h",
-                                                attrs: {
-                                                  value: "Wed 06/27",
-                                                  type: "text",
-                                                  placeholder: "Check-in"
-                                                }
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input _desk-h mobile-picker",
-                                                attrs: {
-                                                  value: "2018-06-27",
-                                                  type: "text"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-2 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "theme-search-area-section-inner"
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass:
-                                                  "theme-search-area-section-icon lin lin-calendar"
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input datePickerEnd _mob-h",
-                                                attrs: {
-                                                  value: "Mon 07/02",
-                                                  type: "text",
-                                                  placeholder: "Check-out"
-                                                }
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input _desk-h mobile-picker",
-                                                attrs: {
-                                                  value: "2018-07-02",
-                                                  type: "text"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-1 " }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-submit _mt-0 theme-search-area-submit-no-border theme-search-area-submit-curved"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                                        Search\n                                                    "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "theme-search-area-options _mob-h theme-search-area-options-white theme-search-area-options-dot-primary-inverse clearfix"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "btn-group theme-search-area-options-list",
-                                    attrs: { "data-toggle": "buttons" }
-                                  },
-                                  [
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary active" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "car-options",
-                                            id: "car-option-1",
-                                            checked: ""
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Any\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "car-options",
-                                            id: "car-option-2"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Sedan\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "car-options",
-                                            id: "car-option-3"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Hatchback\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "car-options",
-                                            id: "car-option-4"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "SUV\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "car-options",
-                                            id: "car-option-5"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Crossover\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "car-options",
-                                            id: "car-option-6"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Coupe\n                                                "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane",
-                        attrs: { id: "SearchAreaTabs-5", role: "tab-panel" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "theme-search-area theme-search-area-stacked"
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "theme-search-area-form" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "row",
-                                    attrs: { "data-gutter": "none" }
-                                  },
-                                  [
-                                    _c("div", { staticClass: "col-md-4 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "theme-search-area-section-inner"
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass:
-                                                  "theme-search-area-section-icon lin lin-location-pin"
-                                              }),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                staticClass:
-                                                  "theme-search-area-section-input typeahead",
-                                                attrs: {
-                                                  type: "text",
-                                                  placeholder: "Destination",
-                                                  "data-provide": "typeahead"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-7 " }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "row",
-                                          attrs: { "data-gutter": "none" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerStart _mob-h",
-                                                        attrs: {
-                                                          value: "Wed 06/27",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-in"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-06-27",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-calendar"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input datePickerEnd _mob-h",
-                                                        attrs: {
-                                                          value: "Mon 07/02",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Check-out"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input _desk-h mobile-picker",
-                                                        attrs: {
-                                                          value: "2018-07-02",
-                                                          type: "text"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-md-4 " },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr quantity-selector",
-                                                  attrs: {
-                                                    "data-increment": "Guests"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "theme-search-area-section-inner"
-                                                    },
-                                                    [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "theme-search-area-section-icon lin lin-people"
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        staticClass:
-                                                          "theme-search-area-section-input",
-                                                        attrs: {
-                                                          value: "2 Guests",
-                                                          type: "text"
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "quantity-selector-box",
-                                                          attrs: {
-                                                            id:
-                                                              "ExpSearchGuests"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "quantity-selector-inner"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "p",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-title"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                                                                Guests"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "ul",
-                                                                {
-                                                                  staticClass:
-                                                                    "quantity-selector-controls"
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-decrement"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "-"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-current"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "\n                                                                                    1\n                                                                                "
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "li",
-                                                                    {
-                                                                      staticClass:
-                                                                        "quantity-selector-increment"
-                                                                    },
-                                                                    [
-                                                                      _c(
-                                                                        "a",
-                                                                        {
-                                                                          attrs: {
-                                                                            href:
-                                                                              "#"
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            "+"
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-md-1 " }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "theme-search-area-submit _mt-0 theme-search-area-submit-no-border theme-search-area-submit-curved"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                                        Search\n                                                    "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "theme-search-area-options _mob-h theme-search-area-options-white theme-search-area-options-dot-primary-inverse clearfix"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "btn-group theme-search-area-options-list",
-                                    attrs: { "data-toggle": "buttons" }
-                                  },
-                                  [
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary active" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "exp-options",
-                                            id: "exp-option-1",
-                                            checked: ""
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Any\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "exp-options",
-                                            id: "exp-option-2"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Experiences\n                                                "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "label",
-                                      { staticClass: "btn btn-primary" },
-                                      [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "radio",
-                                            name: "exp-options",
-                                            id: "exp-option-3"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "Immersions\n                                                "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "row row-col-border-white",
-          attrs: { "data-gutter": "0" }
-        },
-        [
-          _c("div", { staticClass: "col-md-3 " }, [
-            _c("div", { staticClass: "banner banner-" }, [
-              _c("img", {
-                staticClass: "banner-img",
-                attrs: {
-                  src: "img/600x413.png",
-                  alt: "Image Alternative text",
-                  title: "Image Title"
-                }
-              }),
-              _vm._v(" "),
-              _c("a", { staticClass: "banner-link", attrs: { href: "#" } })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3 " }, [
-            _c("div", { staticClass: "banner banner-" }, [
-              _c("img", {
-                staticClass: "banner-img",
-                attrs: {
-                  src: "img/600x413.png",
-                  alt: "Image Alternative text",
-                  title: "Image Title"
-                }
-              }),
-              _vm._v(" "),
-              _c("a", { staticClass: "banner-link", attrs: { href: "#" } })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3 " }, [
-            _c("div", { staticClass: "banner banner-" }, [
-              _c("img", {
-                staticClass: "banner-img",
-                attrs: {
-                  src: "img/600x413.png",
-                  alt: "Image Alternative text",
-                  title: "Image Title"
-                }
-              }),
-              _vm._v(" "),
-              _c("a", { staticClass: "banner-link", attrs: { href: "#" } })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3 " }, [
-            _c("div", { staticClass: "banner banner-" }, [
-              _c("img", {
-                staticClass: "banner-img",
-                attrs: {
-                  src: "img/600x413.png",
-                  alt: "Image Alternative text",
-                  title: "Image Title"
-                }
-              }),
-              _vm._v(" "),
-              _c("a", { staticClass: "banner-link", attrs: { href: "#" } })
-            ])
-          ])
-        ]
-      )
-    ])
-  }
-]
-render._withStripped = true
+var render = function () {}
+var staticRenderFns = []
 
 
 
@@ -38954,6 +36489,297 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/_helpers/auth_header.js":
+/*!**********************************************!*\
+  !*** ./resources/js/_helpers/auth_header.js ***!
+  \**********************************************/
+/*! exports provided: auth_header */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "auth_header", function() { return auth_header; });
+function auth_header() {
+  // return authorization header with jwt token
+  var user = JSON.parse(localStorage.getItem('user'));
+
+  if (user && user.token) {
+    return {
+      'Authorization': 'Bearer ' + user.token
+    };
+  } else {
+    return {};
+  }
+}
+
+/***/ }),
+
+/***/ "./resources/js/_helpers/index.js":
+/*!****************************************!*\
+  !*** ./resources/js/_helpers/index.js ***!
+  \****************************************/
+/*! exports provided: routes, auth_header */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes */ "./resources/js/_helpers/routes.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return _routes__WEBPACK_IMPORTED_MODULE_0__["routes"]; });
+
+/* harmony import */ var _auth_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth_header */ "./resources/js/_helpers/auth_header.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "auth_header", function() { return _auth_header__WEBPACK_IMPORTED_MODULE_1__["auth_header"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./resources/js/_helpers/routes.js":
+/*!*****************************************!*\
+  !*** ./resources/js/_helpers/routes.js ***!
+  \*****************************************/
+/*! exports provided: routes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _components_Home_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../components/Home.vue */ "./resources/js/components/Home.vue");
+/* harmony import */ var _components_BusCompanies_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../components/BusCompanies.vue */ "./resources/js/components/BusCompanies.vue");
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var routes = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
+  mode: 'history',
+  routes: [{
+    path: '/',
+    component: _components_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }, {
+    path: '/bus-company',
+    component: _components_BusCompanies_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }]
+});
+
+/***/ }),
+
+/***/ "./resources/js/_services/bus_companies.js":
+/*!*************************************************!*\
+  !*** ./resources/js/_services/bus_companies.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./resources/js/_services/index.js":
+/*!*****************************************!*\
+  !*** ./resources/js/_services/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _bus_companies__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bus_companies */ "./resources/js/_services/bus_companies.js");
+/* harmony import */ var _bus_companies__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bus_companies__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _bus_companies__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _bus_companies__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _town__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./town */ "./resources/js/_services/town.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "userService", function() { return _town__WEBPACK_IMPORTED_MODULE_1__["userService"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./resources/js/_services/town.js":
+/*!****************************************!*\
+  !*** ./resources/js/_services/town.js ***!
+  \****************************************/
+/*! exports provided: userService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userService", function() { return userService; });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_helpers */ "./resources/js/_helpers/index.js");
+// import config from 'config';
+
+var baseURL = "http://127.0.0.1:8085/api";
+var userService = {
+  getAll: getAll
+};
+
+function getAll() {
+  var requestOptions = {
+    method: 'GET',
+    // headers: authHeader()
+    mode: 'no-cors'
+  };
+  return fetch(baseURL + '/towns', requestOptions).then(handleResponse);
+}
+
+function handleResponse(response) {
+  return response.text().then(function (text) {
+    var data = text && JSON.parse(text);
+
+    if (!response.ok) {
+      if (response.status === 401) {
+        // auto logout if 401 response returned from api
+        logout();
+        location.reload(true);
+      }
+
+      var error = data && data.message || response.statusText;
+      return Promise.reject(error);
+    }
+
+    return data;
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/_store/alert.module.js":
+/*!*********************************************!*\
+  !*** ./resources/js/_store/alert.module.js ***!
+  \*********************************************/
+/*! exports provided: alert */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alert", function() { return alert; });
+var state = {
+  type: null,
+  message: null
+};
+var actions = {
+  success: function success(_ref, message) {
+    var commit = _ref.commit;
+    commit('success', message);
+  },
+  error: function error(_ref2, message) {
+    var commit = _ref2.commit;
+    commit('error', message);
+  },
+  clear: function clear(_ref3, message) {
+    var commit = _ref3.commit;
+    commit('success', message);
+  }
+};
+var mutations = {
+  success: function success(state, message) {
+    state.type = 'alert-success';
+    state.message = message;
+  },
+  error: function error(state, message) {
+    state.type = 'alert-danger';
+    state.message = message;
+  },
+  clear: function clear(state) {
+    state.type = null;
+    state.message = null;
+  }
+};
+var alert = {
+  namespaced: true,
+  state: state,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+
+/***/ "./resources/js/_store/index.js":
+/*!**************************************!*\
+  !*** ./resources/js/_store/index.js ***!
+  \**************************************/
+/*! exports provided: store */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "store", function() { return store; });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _alert_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./alert.module */ "./resources/js/_store/alert.module.js");
+/* harmony import */ var _town_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./town.module */ "./resources/js/_store/town.module.js");
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
+  modules: {
+    alert: _alert_module__WEBPACK_IMPORTED_MODULE_2__["alert"],
+    towns: _town_module__WEBPACK_IMPORTED_MODULE_3__["towns"]
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/_store/town.module.js":
+/*!********************************************!*\
+  !*** ./resources/js/_store/town.module.js ***!
+  \********************************************/
+/*! exports provided: towns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "towns", function() { return towns; });
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_services */ "./resources/js/_services/index.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_helpers */ "./resources/js/_helpers/index.js");
+
+
+var state = {
+  all: {}
+};
+var actions = {
+  getAll: function getAll(_ref) {
+    var commit = _ref.commit;
+    commit('getAllRequest');
+    _services__WEBPACK_IMPORTED_MODULE_0__["userService"].getAll().then(function (towns) {
+      return commit('getAllSuccess', towns);
+    }, function (error) {
+      return commit('getAllFailure', error);
+    });
+  }
+};
+var mutations = {
+  getAllRequest: function getAllRequest(state) {
+    state.all = {
+      loading: true
+    };
+  },
+  getAllSuccess: function getAllSuccess(state, users) {
+    state.all = {
+      items: users
+    };
+  },
+  getAllFailure: function getAllFailure(state, error) {
+    state.all = {
+      error: error
+    };
+  }
+};
+var towns = {
+  namespaced: true,
+  state: state,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -38966,12 +36792,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_store */ "./resources/js/_store/index.js");
 
 
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+ // import { routes } from './_helpers';
+
 
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
 Vue.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -38983,7 +36812,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
 });
 var app = new Vue({
   el: '#app',
-  router: router
+  router: router,
+  store: _store__WEBPACK_IMPORTED_MODULE_3__["store"]
 });
 
 /***/ }),
