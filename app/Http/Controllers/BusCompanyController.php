@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\BusCompanies;
 use App\Services\BusCompanyService;
+use Illuminate\Http\JsonResponse as JsonResponseAlias;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 
 class BusCompanyController extends Controller
@@ -23,7 +23,7 @@ class BusCompanyController extends Controller
 
     /**
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponseAlias
      *
      * function to help to create bus company data
      */

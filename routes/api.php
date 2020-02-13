@@ -26,6 +26,10 @@ Route::group(['middleware' => ['api']], function () {
      *companies routes
      */
     Route::post('companies', 'BusCompanyController@create_bus_company');
-    Route::get('companies', 'BusCompanyController@fetch_companies');
+    Route::get('companies', 'BusCompanyController@fetch_companies');    /*
+     *companies routes
+     */
+    Route::post('travelling_routes', 'TravellingRoutesController@create_travelling_routes');
+    Route::get('travelling_routes', 'TravellingRoutesController@fetch_travelling_routes');
 
 });
