@@ -26,6 +26,7 @@ class TravellingRoutes extends Model
         $rules = array(
             'name' => ['string'],
             'route_name' => ['string'],
+            'departure_time' => ['string'],
             'company_id' => ['required'],
             'from_town_id' => ['required'],
             'to_town_id' => ['required'],

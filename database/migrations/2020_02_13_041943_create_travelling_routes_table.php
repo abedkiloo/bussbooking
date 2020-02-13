@@ -24,6 +24,7 @@ class CreateTravellingRoutesTable extends Migration
             $table->foreign('to_town_id')->references('id')->on('towns');
             $table->text('boarding_points')->nullable();
             $table->integer('status');
+            $table->timestamp('departure_time');
             $table->timestamps();
         });
     }
