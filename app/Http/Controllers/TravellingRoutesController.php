@@ -39,6 +39,10 @@ class TravellingRoutesController extends Controller
         $new_travelling_route->to_town_id = $request->to_town_id;
         $new_travelling_route->boarding_points = $request->boarding_points;
         $new_travelling_route->departure_time = $request->departure_time;
+        $new_travelling_route->fare = $request->fare;
+        $new_travelling_route->discount = $request->discount;
+        $new_travelling_route->number_of_seats = $request->number_of_seats;
+        $new_travelling_route->seats_format = $request->seats_format;
         $new_travelling_route->status = is_null($request->status) ? 0 : $request->status;
 
 

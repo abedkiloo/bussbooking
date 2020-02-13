@@ -16,6 +16,10 @@ class CreateTravellingRoutesTable extends Migration
         Schema::create('travelling_routes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->double('fare');
+            $table->double('discount')->nullable();
+            $table->integer('number_of_seats');
+            $table->string('seats_format');
             $table->bigInteger('company_id')->unsigned()->index();;
             $table->foreign('company_id')->references('id')->on('bus_companies');
             $table->bigInteger('from_town_id')->unsigned()->index();;
